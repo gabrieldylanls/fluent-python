@@ -1,4 +1,5 @@
 from data_model.card_deck import Card, FrenchDeck, spades_high
+from data_model.vector import Vector
 from random import choice
 
 beer_card = Card('7', 'diamonds')
@@ -28,3 +29,16 @@ print(Card('7', 'beasts') in deck)
 
 for card in sorted(deck, key=spades_high):
     print(card)
+
+
+# Although FrenchDeck implicitly inherits from object[6], its functionality is not inherited, 
+# but comes from leveraging the Data Model and composition.
+# By implementing the special methods __len__ and __getitem__ our FrenchDeck behaves like a standard Python sequence,
+# allowing it to benefit from core language features—like iteration and slicing—and from the standard library,
+# as shown by the examples using random.choice, reversed and sorted.
+# Thanks to composition, the __len__ and __getitem__ implementations can hand off all the work to a list object, self._cards.
+
+v1 = Vector(1, 2)
+v2 = Vector(3, 5)
+v3 = v1 + v2
+print(v3)
