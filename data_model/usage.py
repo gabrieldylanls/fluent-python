@@ -1,4 +1,5 @@
 from data_model.card_deck import Card, FrenchDeck
+from random import choice
 
 beer_card = Card('7', 'diamonds')
 print(beer_card)
@@ -8,3 +9,7 @@ print(len(deck))
 
 print(deck[0])
 print(deck[-1])
+
+print(choice(deck))
+print(choice(deck))
+print(choice(deck))
