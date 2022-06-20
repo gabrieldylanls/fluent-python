@@ -9,3 +9,11 @@ print(codes)
 symbols = '$!#&*('
 codes = [ord(symbol) for symbol in symbols]
 print(codes)
+
+# Example 2-3. The same list built by a listcomp and a map/filter composition.
+symbols = '$!#&*('
+beyond_ascii = [ord(s) for s in symbols if ord(s) > 35]
+print(beyond_ascii)
+
+beyond_ascii = list(filter(lambda c: c > 35, map(lambda s: ord(s), symbols)))
+print(beyond_ascii)
