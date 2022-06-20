@@ -45,3 +45,5 @@ print(v3)
 
 v = Vector(4, 5)
 print(abs(v))
+
+print(v * 3)
