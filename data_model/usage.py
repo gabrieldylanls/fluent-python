@@ -1,4 +1,4 @@
-from data_model.card_deck import Card, FrenchDeck
+from data_model.card_deck import Card, FrenchDeck, spades_high
 from random import choice
 
 beer_card = Card('7', 'diamonds')
@@ -25,3 +25,6 @@ for card in reversed(deck):
 
 print(Card('Q', 'hearts') in deck)
 print(Card('7', 'beasts') in deck)
+
+for card in sorted(deck, key=spades_high):
+    print(card)
