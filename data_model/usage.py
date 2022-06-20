@@ -42,3 +42,6 @@ v1 = Vector(1, 2)
 v2 = Vector(3, 5)
 v3 = v1 + v2
 print(v3)
+
+v = Vector(4, 5)
+print(abs(v))
